@@ -15,12 +15,14 @@
     <tr>
         <th>Description</th>
         <th>Due Date</th>
+        <th>Link</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.Description</td>
             <td>@(item.DueDate.HasValue ? @item.DueDate.Value.ToShortDateString() : "")</td>
+            <td><a href="@item.Link">@item.Link</a></td>
         </tr>
     }
 </table>
